@@ -83,6 +83,11 @@ input[type="submit"] {
     background-color: white;
 }
 
+::placeholder {
+    color: red;
+    opacity: .5;
+}
+
 .input-sizer {
     display: inline-grid;
     vertical-align: top;
