@@ -76,6 +76,7 @@ input {
     border: none;
     color: inherit;
     text-align: center;
+    border-radius: 0;
 }
 
 input[type="submit"] {
@@ -116,4 +117,23 @@ textarea {
 
 a {
     color: inherit;
+}
+
+a:hover {
+    background: red;
+}
+
+.two, .three {
+    font-size: .7em;
+    line-height: 1.4em;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 5rem;
 }
