@@ -1,11 +1,7 @@
 // require npm plugins
-const embed = require('eleventy-plugin-embed-everything')
 const md = require('markdown-it')
 
 module.exports = (eleventyConfig) => {
-	// add eleventy plugins
-	eleventyConfig.addPlugin(embed)
-
 	// parse text as markdown
 	eleventyConfig.addFilter('markdown', txt => md.render(txt))
 	
@@ -52,7 +48,7 @@ module.exports = (eleventyConfig) => {
 	})
 
 	// copy additional files to the output folder
-	eleventyConfig.addPassthroughCopy('./src/assets')
+	eleventyConfig.addPassthroughCopy('./src/assets/images')
 	eleventyConfig.addPassthroughCopy('./src/admin')
 	eleventyConfig.addPassthroughCopy('./src/favicon.ico')
 	eleventyConfig.addPassthroughCopy('./src/*.png')
