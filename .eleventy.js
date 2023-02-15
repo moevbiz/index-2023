@@ -1,5 +1,5 @@
 // require npm plugins
-const md = require('markdown-it')
+const md = require('markdown-it')()
 
 module.exports = (eleventyConfig) => {
 	// parse text as markdown
@@ -28,7 +28,7 @@ module.exports = (eleventyConfig) => {
 			start: e.data.start,
 			end: e.data.end,
 			created: now,
-			url: e.data.url
+			url: e.page.url
 		}
 		let ics = `BEGIN:VCALENDAR
 			VERSION:2.0
@@ -48,7 +48,9 @@ module.exports = (eleventyConfig) => {
 	})
 
 	// copy additional files to the output folder
+	eleventyConfig.addPassthroughCopy('./src/_includes')
 	eleventyConfig.addPassthroughCopy('./src/assets/images')
+	eleventyConfig.addPassthroughCopy('./src/assets/fonts')
 	eleventyConfig.addPassthroughCopy('./src/admin')
 	eleventyConfig.addPassthroughCopy('./src/favicon.ico')
 	eleventyConfig.addPassthroughCopy('./src/*.png')

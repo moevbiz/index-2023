@@ -6,9 +6,9 @@ import Leaflet from 'leaflet'
 import Swup from 'swup'
 import SwupScrollPlugin from '@swup/scroll-plugin'
 
-// const swup = new Swup({
-// 	// options
-// 	plugins: [
-// 		new SwupScrollPlugin()
-// 	]
-// })
+const swup = new Swup({
+	// options
+	plugins: [
+		new SwupScrollPlugin()
+	]
+})

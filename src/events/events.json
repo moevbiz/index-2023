@@ -1,4 +1,4 @@
 {
 	"layout" : "layouts/index.njk",
-	"tags" : "space"
+	"tags" : "event"
 }

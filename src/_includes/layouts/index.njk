@@ -4,32 +4,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% for item in collections.index %}
-		<meta name="author" content="{{ item.data.image }}">
-		<meta name="description" content="{{ item.data.description }}">
-		<meta property="og:description" content="{{ item.data.description }}">
-		<meta property="og:image" content="{{ item.data.image }}">
-		<meta property="og:title" content="{{ item.data.title }}">
-		<title>{{ item.data.title }}</title>
+		<meta name="author" content="{{ item.data.meta_image }}">
+		<meta name="description" content="{{ item.data.meta_description }}">
+		<meta property="og:description" content="{{ item.data.meta_description }}">
+		<meta property="og:image" content="{{ item.data.meta_image }}">
+		<meta property="og:title" content="{{ item.data.meta_title }}">
+		<title>{{ item.data.meta_title }}</title>
+	{% endfor %}
 		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
 		<link rel="stylesheet" href="/main.css">
 		<script src="/main.js" defer></script>
-	{% endfor %}
 </head>
 <body>
 	<header>
 		<nav>
-			{% include 'nav.njk' %}
+			{% include 'partials/nav.njk' %}
 		</nav>
 	</header>
 
 	<main id="swup" class="transition-fade">
-		<h1>{{ title }}</h1>
 		{{ content | safe }}
 	</main>
 	
 	<footer>
-		{% include 'footer.njk' %}
+		{% include 'partials/footer.njk' %}
 	</footer>
 </body>
 </html>
