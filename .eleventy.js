@@ -3,23 +3,50 @@ const md = require('markdown-it')()
 
 module.exports = (eleventyConfig) => {
 	// parse text as markdown
-	eleventyConfig.addFilter('markdown', txt => md.render(txt))
+	eleventyConfig.addFilter('markdown', (txt) => md.render(txt))
 	
 	// get year from datetime
-	eleventyConfig.addFilter('year', t => (new Date(t)).getFullYear())
+	eleventyConfig.addFilter('year', (t) => (new Date(t)).getFullYear())
 	
-	// format datetime as dd/mm/yyyy
-	eleventyConfig.addFilter('date', t => {
+	// format datetime as dd.mm.yyyy
+	eleventyConfig.addFilter('date', (t) => {
 		t = new Date(t)
-		t = t.getDate() + "/" + (t.getMonth() + 1) + "/" + date.getFullYear()
+		t = t.getDate() + "." + (t.getMonth() + 1) + "." + t.getFullYear()
 		return t
 	})
 
+	// format time as hh:mm
+	eleventyConfig.addFilter('time', (t) => {
+		t = new Date(t)
+		let h = t.getHours()
+		let m = t.getMinutes()
+		h = h < 10 ? ("0" + h) : h
+		m = m < 10 ? ("0" + m) : m
+		t = h + ":" + m
+		return t
+	})
+
+	// get zip code from district number
+	eleventyConfig.addFilter('zip', (n) => {
+		let zip = n < 10 ? ("10" + n + "0") : ("1" + n + "0")
+		return zip
+	})
+
+	// make url pretty
+	eleventyConfig.addFilter('prettyurl', (url) => {
+		let prettyurl = url.split("//").pop()
+			.split("www.").pop()
+			.replace("instagram.com/", "@")
+			.replace("facebook.com/", "@")
+			.split("/")[0]
+		return prettyurl
+	})
+
 	// console log element
-	eleventyConfig.addFilter('log', e => console.log(e))
+	eleventyConfig.addFilter('log', (e) => console.log(e))
 
 	// generate .ics (calendar) file
-	eleventyConfig.addFilter('ics', e => {
+	eleventyConfig.addFilter('ics', (e) => {
 		let now = new Date()
 		let data = {
 			title: e.data.title,

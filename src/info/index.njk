@@ -1,18 +1,46 @@
 ---
 layout: layouts/index.njk
-body_en: ...
-body_de: ...
-mail: ...
-instagram: ...
-website: ...
-imprint: ...
-logos: ... 
+body_en: Info in English.
+body_de: Info in German.
+mail: contact@independentspaceindex.at
+instagram: independentspaceindex
+website: https://independentspaceindex.at
+imprint: https://independentspaceindex.at/imprint
+logos: ...
 ---
+
+<p>Info</p>
+
+<hr>
 
 <p>En</p>
 
 <p>{{ body_en | markdown | safe }}</p>
 
+<hr>
+
 <p>De</p>
 
 <p>{{ body_de | markdown | safe }}</p>
+
+<hr>
+
+<p>
+	Mail
+	<br>
+	<a href="mailto:{{ mail }}">{{ mail }}</a>
+</p>
+
+<p>
+	Instagram
+	<br>
+	<a href="https://instagram.com/{{ instagram }}">@{{ instagram }}</a>
+</p>
+
+<p><a href="{{ website }}">More info</a></p>
+
+<p>Sign up to our newsletter!</p>
+
+<input type="email">
+
+<p><a href="{{ imprint }}">Privacy & Imprint</a></p>

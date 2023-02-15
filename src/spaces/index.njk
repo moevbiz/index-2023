@@ -4,3 +4,32 @@ eleventyExcludeFromCollections: true
 ---
 
 <p>Spaces</p>
+
+<p>
+	{% for space in collections.space %}
+			<hr>
+	  <div class="space">
+	  	<div class="space-title">{{ space.data.name }}</div>
+	  	<div class="space-location">@ {{ space.data.address }}, {{ space.data.district | zip }} Vienna</div>
+	  	<div class="space-website"><a href="{{ space.data.website }}">{{ space.data.website | prettyurl }}</a></div>
+	  </div>
+	  <br>
+	  <div class="space-events">
+	  	Events:
+	  	<br>
+		  {% for event in collections.event %}
+		    {% if event.data.location == space.data.name %}
+		    	<br>
+		    	<div class="event">
+					  	<div class="event-title">{{ event.data.title }}</div>
+					  	<div class="event-location">@ {{ event.data.location }}</div>
+					  	<div class="event-date">
+					  		{{ event.data.start | date }} - {{ event.data.end | date }}
+					  	</div>
+					  	<div class="event-description">{{ event.data.description }}</div>
+				  </div>
+		    {% endif %}
+		  {% endfor %}
+	  </div>
+	{% endfor %}
+</p>

@@ -4,3 +4,33 @@ eleventyExcludeFromCollections: true
 ---
 
 <p>Events</p>
+
+<p>
+	{% for event in collections.event %}
+			<hr>
+	  <div class="event">
+	  	<div class="event-title">{{ event.data.title }}</div>
+	  	<div class="event-category">({{ event.data.category }})</div>
+	  	<div class="event-location">@ {{ event.data.location }}</div>
+	  	<div class="event-date">
+	  		{# {% if event.data.category == 'Event' %}
+	  				{{ event.data.start | date }}
+	  				<br>
+	  				{{ event.data.start | time }} - {{ event.data.end | time }}
+	  			{% else %} 
+	  				{{ event.data.start | date }} - {{ event.data.end | date }}
+	  		{% endif %} #}
+	  		{% if event.data.start | date == event.data.end | date %}
+		  			{{ event.data.start | date }}
+		  			<br>
+		  			{{ event.data.start | time }} - {{ event.data.end | time }}
+	  			{% else %}
+	  				{{ event.data.start | date }} - {{ event.data.end | date }}
+		  			<br>
+		  			{{ event.data.start | time }} - {{ event.data.end | time }}
+	  		{% endif %}
+	  	</div>
+	  	<div class="event-description">{{ event.data.description }}</div>
+	  </div>
+	{% endfor %}
+</p>
