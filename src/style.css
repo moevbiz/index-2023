@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Apfel Grotezk Brukt";
+    src: url("./assets/fonts/ApfelGrotezk-Brukt.woff2") format("woff2"),
+         url("./assets/fonts/ApfelGrotezk-Brukt.woff") format("woff");
+}  
+
+@font-face {
+    font-family: "Apfel Grotezk";
+    font-weight: 400;
+    src: url("./assets/fonts/ApfelGrotezk-Regular.woff2") format("woff2"),
+         url("./assets/fonts/ApfelGrotezk-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Apfel Grotezk";
+    font-weight: 800;
+    src: url("./assets/fonts/ApfelGrotezk-Fett.woff2") format("woff2"),
+         url("./assets/fonts/ApfelGrotezk-Fett.woff") format("woff");
+}

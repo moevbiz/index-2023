@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-// https://add-to-calendar-pro.com // button v2.2.4 //EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:eff4746d-f0ce-40da-bcb4-a2295d876385
+DTSTAMP:20230404T083633Z
+DTSTART;VALUE=DATE:20230602
+DTEND;VALUE=DATE:20230605
+SUMMARY:Independent Space Index Festival 2023
+DESCRIPTION:On Friday\, Saturday and Sunday\, June 2\, 3\, and 4\, from 
+ 2 to 6 p.m. each day\, Vienna's project spaces are jointly h
+ osting citywide open days. All participating spaces will ext
+ end their opening hours and visitors will be able to see ong
+ oing exhibitions and attend special events without pre-regis
+ tration. Many of these spaces will host opening receptions o
+ r events in the evenings during the festival. This creates a
+  unique opportunity to experience Vienna's scene\, in an int
+ imate manner\, in the spaces directly involved with artistic
+  production.
+
+X-ALT-DESC;FMTTYPE=text/html:
+ <!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 3.2//EN"">
+ <HTML><BODY>
+ On Friday\, Saturday and Sunday\, June 2\, 3\, and 4\, from 
+ 2 to 6 p.m. each day\, Vienna's project spaces are jointly h
+ osting citywide open days. All participating spaces will ext
+ end their opening hours and visitors will be able to see ong
+ oing exhibitions and attend special events without pre-regis
+ tration. Many of these spaces will host opening receptions o
+ r events in the evenings during the festival. This creates a
+  unique opportunity to experience Vienna's scene\, in an int
+ imate manner\, in the spaces directly involved with artistic
+  production.
+
+ </BODY></HTML>
+LOCATION:Vienna\, Austria
+SEQUENCE:0
+STATUS:CONFIRMED
+CREATED:20230404T082831Z
+LAST-MODIFIED:20230404T082831Z
+END:VEVENT
+END:VCALENDAR
