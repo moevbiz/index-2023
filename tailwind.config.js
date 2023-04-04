@@ -5,11 +5,12 @@ module.exports = {
   ],
   theme: {
     fontSize: {
+      xs: ['12px', '16px'],
       sm: ['14px', '20px'],
       base: ['16px', '24px'],
       lg: ['20px', '26px'],
-      xl: ['24px', '32px'],
-      '2xl': ['48px', '56px'],
+      xl: ['32px', '36px'],
+      '2xl': ['48px', '52px'],
     },
     fontFamily: {
       sans: 'Arial, sans-serif',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-red text-lg text-white [&_a:not([class=])]:border-b">
+<html lang="en" class="bg-red text-lg text-white [&_a:not([class=])]:border-b overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,16 +16,20 @@
     />
   </head>
 
-  <body class="">
+  <body class="max-w-[2200px] relative mx-auto">
 
-    <div class="mb-12">
-      <img class="block md:hidden" src="./assets/images/logo_mobile.svg" alt="Independent Space Index">
-      <img class="hidden md:block" src="./assets/images/logo_desktop.svg" alt="Independent Space Index">
+    <!-- <div class="font-bold hidden lg:block absolute left-[80vw] top-80 -rotate-3">
+      <a href="https://www.instagram.com/explore/tags/indexvienna/" target="_blank">#indexvienna</a>
+    </div> -->
+
+    <div class="mb-4 max-w-[1150px]">
+      <img class="block sm:hidden" src="./assets/images/logo_mobile.svg" alt="Independent Space Index">
+      <img class="hidden sm:block" src="./assets/images/logo_desktop.svg" alt="Independent Space Index">
     </div>
 
-    <div class="grid md:grid-cols-2 p-6 gap-10 [&_p:not(:first-of-type)]:indent-4 mb-10">
+    <div class="grid md:grid-cols-2 p-3 md:p-6 gap-12 [&_h1]:max-w-[22ch] [&_p]:max-w-[60ch] [&_p:not(:first-of-type)]:indent-4 mb-10">
       <div class="left">
-        <h1 class="text-2xl font-apfel indent-5 mb-4">Info (EN)</h1>
+        <h1 class="text-xl lg:text-2xl font-apfel pl-4 md:pl-14 md:-indent-10 mb-4">The festival of project spaces in Vienna</h1>
         <p>
           On Friday, Saturday and Sunday, June 2, 3, and 4, from 2 to 6 p.m. each day, Vienna's project spaces are jointly hosting citywide open days. All participating spaces will extend their opening hours and visitors will be able to see ongoing exhibitions and attend special events without pre-registration. 
         </p>
@@ -36,8 +40,8 @@
           The festival program will be communicated on this website from May.
         </p>
       </div>
-      <div class="right">
-        <h1 class="text-2xl font-apfel indent-5 mb-4">Info (DE)</h1>
+      <div class="right" lang="de">
+        <h1 class="text-xl lg:text-2xl font-apfel pl-4 md:pl-14 md:-indent-10 mb-4">Das Festival der Wiener Projekträume</h1>
         <p>
           Am Freitag, Samstag und Sonntag, 2., 3. und 4. Juni, jeweils von 14 bis 18 Uhr, veranstalten die Wiener Projekträume gemeinsam stadtweite Tage der offenen Tür. Alle teilnehmenden Räume verlängern ihre Öffnungszeiten und  Besucher:innen können ohne Voranmeldung laufende Ausstellungen sowie Veranstaltungen besuchen. 
         </p>
@@ -50,21 +54,21 @@
       </div>
     </div>
 
-    <div class="foot p-6">
+    <div class="foot p-3 md:p-6">
 
       <div class="text-xl md:text-2xl font-apfel mb-20">
-        <h1>Save the date!</h1>
-        <div>The festival of project spaces in Vienna – 6th edition</div>
+        <h1><a href="https://www.instagram.com/explore/tags/indexvienna/" target="_blank">#indexvienna</a></h1>
+        <div>The festival of project spaces – 6th edition</div>
         <div>June 2nd-4th, 2023</div>
-        <a href="https://instagram.com/independentspaceindex">Instagram</a> •
-        <a href="https://independentspaceindex.us3.list-manage.com/subscribe/post?u=0374c316ca0bed48cd24b414d&amp;id=c15dfe900b&amp;f_id=00155ae2f0">Newsletter</a>
+        <a target="_blank" href="https://instagram.com/independentspaceindex">Instagram</a> •
+        <a target="_blank" href="https://independentspaceindex.us3.list-manage.com/subscribe/post?u=0374c316ca0bed48cd24b414d&amp;id=c15dfe900b&amp;f_id=00155ae2f0">Newsletter</a>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-base [&_h2]:text-lg [&_h2]:indent-4 mb-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-base [&_h2]:text-lg [&_h2]:indent-4 mb-20">
 
         <div class="">
           <h2>Save the date:</h2>
-          <a href="./assets/files/index-2023.ics">iCal Event</a>
+          <a href="./assets/files/index-2023.ics">Download iCal Event</a>
         </div>
 
         <!-- Begin Mailchimp Signup Form -->
@@ -171,9 +175,26 @@
         
       </div>
 
-      <footer class="text-sm">
+      <footer class="text-xs">
+        <p class="mb-3">
+          Supported by: / Unterstützt durch:
+        </p>
+        <div class="flex flex-wrap items-center gap-4 mb-6">
+          <a class="" href="https://www.wien.gv.at/kultur/abteilung/">
+            <img class="h-[40px]" src="./assets/images/wien_kultur.png" alt="Stadt Wien Kultur">
+          </a>
+          <a class="" href="https://www.bmkoes.gv.at/">
+            <img class="h-[50px]" src="./assets/images/weiss_bmkos.svg" alt="BMKOES">
+          </a>
+        </div>
+        Concept: Independent Space Index / Bruno Mokross & Francis Ruyter •
+        Assistant: Michał Leszuk •
+        Graphic design: Hannah Sakai •
+        Web development: Barnabás Bacsi
+        <br>
         &copy; 2023 Independent Space Index - Netzwerk unabhängiger Kunsträume •
         <a href="https://independentspaceindex.at/imprint">Imprint & Privacy</a>
+        <br>
       </footer>
 
   </body>
